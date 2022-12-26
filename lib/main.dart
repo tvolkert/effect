@@ -7,7 +7,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/widgets.dart';
 
 const _debugExtraInfo = false;
-const _rotationInterval = Duration(seconds: 10);
+const _rotationInterval = Duration(seconds: 60);
 
 const double perspectiveAngleRadians = 0.4315;
 
@@ -68,108 +68,57 @@ void main() {
   runApp(AppContainer(
     child: MontageController(
       builders: <MontageCardBuilder>[
-        MontageCardBuilder(
-            x: 0.00, y: 0.55, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 1.00, y: 0.55, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 1.00, y: 0.00, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.20, y: 0.05, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.60, y: 0.09, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.05, y: 0.15, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.80, y: 0.20, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.35, y: 0.25, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.64, y: 0.30, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.25, y: 0.35, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.85, y: 0.40, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.10, y: 0.45, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.85, y: 0.49, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.40, y: 0.50, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.60, y: 0.55, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.15, y: 0.60, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 1.00, y: 0.65, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.65, y: 0.66, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.20, y: 0.70, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.45, y: 0.75, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.75, y: 0.80, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.09, y: 0.85, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.88, y: 0.89, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.50, y: 0.90, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.25, y: 0.95, layer: Layer2.back, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.04, y: 0.05, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.40, y: 0.10, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.96, y: 0.15, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.24, y: 0.20, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.80, y: 0.25, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.10, y: 0.30, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.70, y: 0.35, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 1.00, y: 0.40, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.10, y: 0.42, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.67, y: 0.48, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.22, y: 0.55, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.84, y: 0.60, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.15, y: 0.65, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.74, y: 0.70, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.10, y: 0.75, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.88, y: 0.80, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.35, y: 0.85, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.03, y: 0.92, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.85, y: 0.95, layer: Layer2.middle, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.00, y: 0.25, layer: Layer2.front, key: _newKey()),
-        MontageCardBuilder(
-            x: 1.00, y: 0.35, layer: Layer2.front, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.50, y: 0.45, layer: Layer2.front, key: _newKey()),
-        MontageCardBuilder(
-            x: 1.00, y: 0.55, layer: Layer2.front, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.00, y: 0.65, layer: Layer2.front, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.50, y: 0.80, layer: Layer2.front, key: _newKey()),
-        MontageCardBuilder(
-            x: 0.00, y: 1.00, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 0.00, y: 0.55, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 1.00, y: 0.55, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 1.00, y: 0.00, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.20, y: 0.05, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.60, y: 0.09, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.05, y: 0.15, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.80, y: 0.20, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.35, y: 0.25, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.64, y: 0.30, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.25, y: 0.35, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.85, y: 0.40, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.10, y: 0.45, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.85, y: 0.49, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.40, y: 0.50, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.60, y: 0.55, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.15, y: 0.60, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 1.00, y: 0.65, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.65, y: 0.66, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.20, y: 0.70, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.45, y: 0.75, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.75, y: 0.80, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.09, y: 0.85, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.88, y: 0.89, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.50, y: 0.90, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.25, y: 0.95, layer: Layer2.back, key: _newKey()),
+        MontageCardBuilder(x: 0.04, y: 0.05, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.40, y: 0.10, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.96, y: 0.15, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.24, y: 0.20, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.80, y: 0.25, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.10, y: 0.30, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.70, y: 0.35, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 1.00, y: 0.40, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.10, y: 0.42, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.67, y: 0.48, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.22, y: 0.55, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.84, y: 0.60, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.15, y: 0.65, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.74, y: 0.70, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.10, y: 0.75, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.88, y: 0.80, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.35, y: 0.85, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.03, y: 0.92, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.85, y: 0.95, layer: Layer2.middle, key: _newKey()),
+        MontageCardBuilder(x: 0.00, y: 0.25, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 1.00, y: 0.35, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 0.50, y: 0.45, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 1.00, y: 0.55, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 0.00, y: 0.65, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 0.50, y: 0.80, layer: Layer2.front, key: _newKey()),
+        MontageCardBuilder(x: 0.00, y: 1.00, layer: Layer2.front, key: _newKey()),
       ],
     ),
   ));
@@ -232,8 +181,7 @@ class _MontageControllerState extends State<MontageController> {
 
   @override
   void dispose() {
-    SchedulerBinding.instance
-        .cancelFrameCallbackWithId(_scheduledFrameCallbackId);
+    SchedulerBinding.instance.cancelFrameCallbackWithId(_scheduledFrameCallbackId);
     super.dispose();
   }
 
@@ -325,8 +273,7 @@ class MontageCardBuilder {
   double _calculateDy(Size screenSize, int currentFrame) {
     double canvasHeight = screenSize.height * _canvasScreenRatio;
     double yOffset = canvasHeight * y;
-    double frameOffset =
-        canvasHeight - ((currentFrame * layer.speed) % canvasHeight);
+    double frameOffset = canvasHeight - ((currentFrame * layer.speed) % canvasHeight);
     double yPos = (frameOffset + yOffset) % canvasHeight;
     double viewportOffset = (canvasHeight - screenSize.height) / -2;
     return yPos + viewportOffset;
@@ -352,8 +299,7 @@ class MontageSpinner extends StatefulWidget {
   State<MontageSpinner> createState() => _MontageSpinnerState();
 }
 
-class _MontageSpinnerState extends State<MontageSpinner>
-    with SingleTickerProviderStateMixin {
+class _MontageSpinnerState extends State<MontageSpinner> with SingleTickerProviderStateMixin {
   late AnimationController animation;
   late Animation<double> rotation;
   late Animation<double> distance;
@@ -371,9 +317,7 @@ class _MontageSpinnerState extends State<MontageSpinner>
           // Updated animation values will be reflected in `build()`
         });
       });
-    rotation = ThetaTween()
-        .chain(CurveTween(curve: Curves.easeInOutCubic))
-        .animate(animation);
+    rotation = ThetaTween().chain(CurveTween(curve: Curves.easeInOutCubic)).animate(animation);
     distance = TweenSequence<double>(
       <TweenSequenceItem<double>>[
         TweenSequenceItem<double>(
@@ -460,22 +404,10 @@ class RenderMontage extends RenderBox
         _distance = distance;
 
   static final Matrix4 _perspectiveTransform = Matrix4(
-    1.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    1.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    1.0,
-    0.001,
-    0.0,
-    0.0,
-    0.0,
-    1.0,
+    1.0, 0.0, 0.0, 0.0, // nodartfmt
+    0.0, 1.0, 0.0, 0.0, // nodartfmt
+    0.0, 0.0, 1.0, 0.001, // nodartfmt
+    0.0, 0.0, 0.0, 1.0, // nodartfmt
   );
 
   double _rotation = 0;
@@ -507,10 +439,8 @@ class RenderMontage extends RenderBox
   @override
   void performLayout() {
     assert(constraints.isTight);
-    final double maxSize =
-        math.max(constraints.maxWidth, constraints.maxHeight);
-    final Constraints childConstraints =
-        BoxConstraints.tight(Size.square(maxSize * 0.25));
+    final double maxSize = math.max(constraints.maxWidth, constraints.maxHeight);
+    final Constraints childConstraints = BoxConstraints.tight(Size.square(maxSize * 0.25));
     RenderBox? child = firstChild;
     while (child != null) {
       MontageParentData childParentData = child.parentData as MontageParentData;
@@ -523,8 +453,7 @@ class RenderMontage extends RenderBox
   void paintBackwards(PaintingContext context, Offset offset) {
     RenderBox? child = lastChild;
     while (child != null) {
-      final MontageParentData childParentData =
-          child.parentData! as MontageParentData;
+      final MontageParentData childParentData = child.parentData! as MontageParentData;
       context.paintChild(child, childParentData.offset + offset);
       child = childParentData.previousSibling;
     }
@@ -544,8 +473,7 @@ class RenderMontage extends RenderBox
       return true;
     }());
     while (child != null) {
-      final MontageParentData childParentData =
-          child.parentData! as MontageParentData;
+      final MontageParentData childParentData = child.parentData! as MontageParentData;
       context.paintChild(child, childParentData.offset + offset);
       child = childParentData.nextSibling;
     }
@@ -599,16 +527,6 @@ class MontageCard extends SingleChildRenderObjectWidget {
   final double z;
   final double scale;
 
-  // MontageCard moveBy({double? x, double? y, double? z}) {
-  //   return MontageCard(
-  //     x: x ?? this.x,
-  //     y: y ?? this.y,
-  //     z: z ?? this.z,
-  //     scale: scale,
-  //     child: child,
-  //   );
-  // }
-
   @override
   RenderMontageCard createRenderObject(BuildContext context) {
     return RenderMontageCard(
@@ -620,8 +538,7 @@ class MontageCard extends SingleChildRenderObjectWidget {
   }
 
   @override
-  void updateRenderObject(
-      BuildContext context, RenderMontageCard renderObject) {
+  void updateRenderObject(BuildContext context, RenderMontageCard renderObject) {
     renderObject
       ..x = x
       ..y = y
